@@ -455,7 +455,9 @@ function M.format_buffers(buffers, max_length)
       if before ~= nil and i == 1 then
         line = "%#tabline_b_normal#..." .. "%#tabline_b_to_a#" .. M.options.section_left .. line
       elseif before ~= nil then
-        line = "%#tabline_b_normal#..." .. M.options.component_left .. line
+        -- line = "%#tabline_b_normal#..." .. M.options.component_left .. line
+        -- line = "%#tabline_b_normal#...%#tabline_a_to_b#" .. M.options.component_left .. line
+        line = "%#tabline_a_to_b#..." .. M.options.component_left .. line
       end
       if after ~= nil then
         line = line .. "..." .. "%#tabline_b_to_c#" .. M.options.section_left .. "%#tabline_c_normal#"
